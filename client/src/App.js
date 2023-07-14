@@ -2,7 +2,10 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 import { useMemo } from "react";
-import { themeSettings } from "theme";
+import { themeSettings } from "theme.js";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import Dashboard from 'pages/Dashboard'
+import Layout from 'pages/common/Layout'
 
 
 function App() {
@@ -14,10 +17,20 @@ function App() {
 
   return (
     <div className="app">
-      <ThemeProvider theme={theme}>
-        {/* CssBaseLIne remove default mui css */}
-        <CssBaseline />
-      </ThemeProvider>
+      <Router>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseLIne remove default mui css */}
+          <CssBaseline />
+          <Routes>
+            <Route element={<Layout />} >
+              <Route path="/" element={<Navigate to="/dashboard" replace />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+
+            </Route>
+          </Routes>
+
+        </ThemeProvider>
+      </Router>
     </div>
   )
 }
