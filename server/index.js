@@ -12,7 +12,9 @@ import salesRoutes from "./routes/sales.js";
 
 //data db imports
 import User from "./models/User.js"; //mongoose schema
-import { dataUser } from './data/index.js' //db
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataUser, dataProduct, dataProductStat } from './data/index.js' //db
 
 // CONFIGURATION
 dotenv.config();
@@ -48,6 +50,8 @@ mongoose
 
         app.listen(PORT, () => console.log(`Connected to MongoDB... ${PORT}`))
         // data adds only one time
+        // Product.insertMany(dataProduct);
+        // ProductStat.insertMany(dataProductStat)
         // User.insertMany(dataUser);
     })
     .catch((err) => console.error("Could not connect to MongoDB...", err));
