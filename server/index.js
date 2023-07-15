@@ -48,6 +48,6 @@ mongoose
 
         app.listen(PORT, () => console.log(`Connected to MongoDB... ${PORT}`))
         // data adds only one time
-        User.insertMany(dataUser);
+        // User.insertMany(dataUser);
     })
     .catch((err) => console.error("Could not connect to MongoDB...", err));
