@@ -9,7 +9,12 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
     user : json object of that id
  }
  */
-//here: query : string
+//here: query : json object of that id from db
+
+//exports: 
+// api: {
+//     baseQuery, fetchBaseQuery, tagtypes, and query:json object
+// }
 
 export const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
@@ -26,15 +31,15 @@ export const api = createApi({
         "Dashboard",
     ],
     endpoints: (build) => ({
-        //getCall
+        //only send get requests as 
         getUser: build.query({
-            query: (id) => `general/user/${id}`,
+            query: (id) => `general/user/${id}`, //saves json object of that id form db
             providesTags: ["User"],
         })
     })
 })
 
 export const {
-    useGetUserQuery,
+    useGetUserQuery, //returns flags and url
 
 } = api

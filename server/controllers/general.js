@@ -1,5 +1,8 @@
 import User from "../models/User.js";
 
+//called in /routes/general.js
+// sets express router: sends getUser function whenever getRequest on ""/user/:id", getUser"
+
 // id: string
 //user: json object of that id
 
