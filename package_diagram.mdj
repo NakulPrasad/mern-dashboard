@@ -809,11 +809,11 @@
 								"$ref": "AAAAAAGJWUp23Zy22i8="
 							},
 							"font": "Source Code Pro;15;0",
-							"left": 624,
+							"left": 544,
 							"top": 856,
-							"width": 248.19976806640625,
+							"width": 328.19976806640625,
 							"height": 161,
-							"text": "MAKES GET REQUEST : /general/user/${id}\n/client/products"
+							"text": "MAKES GET REQUEST : \n1. /general/user/${id}\n2. /client/products\n3. /client/customers\n4. /client/transactions"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -829,7 +829,7 @@
 								"$ref": "AAAAAAGJWV7ynZ8cZHE="
 							},
 							"lineStyle": 1,
-							"points": "1031:968;872:950"
+							"points": "1031:969;872:953"
 						},
 						{
 							"_type": "UMLDependencyView",
@@ -1134,76 +1134,6 @@
 							}
 						},
 						{
-							"_type": "UMLDependencyView",
-							"_id": "AAAAAAGJWWcXs5/QG5s=",
-							"_parent": {
-								"$ref": "AAAAAAGJWUp23Zy22i8="
-							},
-							"model": {
-								"$ref": "AAAAAAGJWWcXsp/OkCM="
-							},
-							"subViews": [
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAGJWWcXs5/SGhM=",
-									"_parent": {
-										"$ref": "AAAAAAGJWWcXs5/QG5s="
-									},
-									"model": {
-										"$ref": "AAAAAAGJWWcXsp/OkCM="
-									},
-									"visible": null,
-									"font": "Arial;13;0",
-									"left": 1227,
-									"top": 1701,
-									"height": 13,
-									"alpha": 1.5707963267948966,
-									"distance": 30,
-									"hostEdge": {
-										"$ref": "AAAAAAGJWWcXs5/QG5s="
-									},
-									"edgePosition": 1
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAGJWWcXs5/T+BM=",
-									"_parent": {
-										"$ref": "AAAAAAGJWWcXs5/QG5s="
-									},
-									"model": {
-										"$ref": "AAAAAAGJWWcXsp/OkCM="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 1229,
-									"top": 1657,
-									"height": 13,
-									"alpha": -1.5707963267948966,
-									"distance": 15,
-									"hostEdge": {
-										"$ref": "AAAAAAGJWWcXs5/QG5s="
-									},
-									"edgePosition": 1
-								}
-							],
-							"font": "Arial;15;0",
-							"head": {
-								"$ref": "AAAAAAGJWWRhsZ9TpVQ="
-							},
-							"tail": {
-								"$ref": "AAAAAAGJWWZjl5+fWcs="
-							},
-							"lineStyle": 1,
-							"points": "1311:1683;1148:1673",
-							"showVisibility": true,
-							"stereotypeLabel": {
-								"$ref": "AAAAAAGJWWcXs5/SGhM="
-							},
-							"propertyLabel": {
-								"$ref": "AAAAAAGJWWcXs5/T+BM="
-							}
-						},
-						{
 							"_type": "UMLNoteView",
 							"_id": "AAAAAAGJWWww+5/+1L8=",
 							"_parent": {
@@ -1214,7 +1144,7 @@
 							"top": 1632,
 							"width": 321,
 							"height": 113,
-							"text": "SEND RESONSE\nJSON OBJ : user details {ID}\n\n"
+							"text": "SEND RESONSE\nJSON : user details {ID}\n\n"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -1641,11 +1571,11 @@
 								"$ref": "AAAAAAGJWUp23Zy22i8="
 							},
 							"font": "Source Code Pro;15;0",
-							"left": 592,
+							"left": 600,
 							"top": 1480,
 							"width": 321,
 							"height": 98,
-							"text": "SEND RESPONSE\nJSON ARRAY : product + stats\n"
+							"text": "SEND RESPONSE\nJSON : product + stats\n"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -1661,7 +1591,7 @@
 								"$ref": "AAAAAAGJWyvGe0e5jq4="
 							},
 							"lineStyle": 1,
-							"points": "1047:1594;913:1564"
+							"points": "1047:1594;921:1565"
 						},
 						{
 							"_type": "UMLPackageView",
@@ -2017,8 +1947,8 @@
 							"left": 1264,
 							"top": 1896,
 							"width": 196,
-							"height": 82,
-							"text": "EXPRESS ROUTES\nIF GET REQUESTS ON\n1. /product\n2. /user/:id"
+							"height": 112,
+							"text": "EXPRESS ROUTES\nIF GET REQUESTS ON\n1. /product\n2. /user/:id\n3. /customers\n4. /transactions"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -3128,7 +3058,7 @@
 							"font": "Source Code Pro;15;0",
 							"left": 1448,
 							"top": 880,
-							"width": 129,
+							"width": 133.10791015625,
 							"height": 119,
 							"text": "1. IMPORTS PRODUCT+STAT JSON\n2. DESTRUCTURE & PASS AS PROPS"
 						},
@@ -3524,20 +3454,6 @@
 									},
 									"name": "general.js",
 									"ownedElements": [
-										{
-											"_type": "UMLDependency",
-											"_id": "AAAAAAGJWWcXsp/OkCM=",
-											"_parent": {
-												"$ref": "AAAAAAGJWWZjl5+dz1A="
-											},
-											"name": "calls getUser",
-											"source": {
-												"$ref": "AAAAAAGJWWZjl5+dz1A="
-											},
-											"target": {
-												"$ref": "AAAAAAGJWWRhsZ9RqJQ="
-											}
-										},
 										{
 											"_type": "UMLDependency",
 											"_id": "AAAAAAGJW2+7xUkk284=",

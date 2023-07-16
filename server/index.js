@@ -14,7 +14,9 @@ import salesRoutes from "./routes/sales.js";
 import User from "./models/User.js"; //mongoose schema
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
-import { dataUser, dataProduct, dataProductStat } from './data/index.js' //db
+import Transaction from "./models/Transaction.js";
+import { dataUser, dataProduct, dataProductStat, dataTransaction } from './data/index.js' //db
+
 
 // CONFIGURATION
 dotenv.config();
@@ -53,5 +55,6 @@ mongoose
         // Product.insertMany(dataProduct);
         // ProductStat.insertMany(dataProductStat)
         // User.insertMany(dataUser);
+        // Transaction.insertMany(dataTransaction);
     })
     .catch((err) => console.error("Could not connect to MongoDB...", err));

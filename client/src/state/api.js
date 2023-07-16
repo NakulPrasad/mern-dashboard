@@ -33,7 +33,15 @@ export const api = createApi({
         getCustomers: build.query({
             query: () => `client/customers`, //saves json user without password
             providesTags: ["Customers"]
-        })
+        }),
+        getTransactions: build.query({
+            query: ({ page, pageSize, sort, search }) => ({
+                url: "client/transactions",
+                method: "GET",
+                params: { page, pageSize, sort, search },
+            }),
+            providesTags: ["Transactions"],
+        }),
     })
 })
 
@@ -44,5 +52,6 @@ export const {
     useGetProductsQuery,
     //user with role:user
     useGetCustomersQuery,
+    useGetTransactionsQuery,
 
 } = api
