@@ -6,6 +6,9 @@ import { themeSettings } from "theme.js";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Dashboard from 'pages/Dashboard'
 import Layout from 'pages/common/Layout'
+import Products from 'pages/Products'
+import Customers from 'pages/Customers'
+
 
 
 function App() {
@@ -25,6 +28,8 @@ function App() {
             <Route element={<Layout />} >
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/customers" element={<Customers />} />
 
             </Route>
           </Routes>
