@@ -619,7 +619,7 @@
 											"visible": false,
 											"font": "Arial;15;0",
 											"left": 2256,
-											"top": 2224,
+											"top": 2512,
 											"height": 15
 										},
 										{
@@ -630,7 +630,7 @@
 											},
 											"font": "Arial;15;1",
 											"left": 1525,
-											"top": 1534,
+											"top": 1678,
 											"width": 175,
 											"height": 15,
 											"text": "index.js"
@@ -644,7 +644,7 @@
 											"visible": false,
 											"font": "Arial;15;0",
 											"left": 2256,
-											"top": 2224,
+											"top": 2512,
 											"width": 117,
 											"height": 15,
 											"text": "(from server)"
@@ -658,14 +658,14 @@
 											"visible": false,
 											"font": "Arial;15;0",
 											"left": 2256,
-											"top": 2224,
+											"top": 2512,
 											"height": 15,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;15;0",
 									"left": 1520,
-									"top": 1527,
+									"top": 1671,
 									"width": 185,
 									"height": 27,
 									"stereotypeLabel": {
@@ -685,7 +685,7 @@
 							"font": "Arial;15;0",
 							"containerChangeable": true,
 							"left": 1520,
-							"top": 1512,
+							"top": 1656,
 							"width": 185,
 							"height": 45,
 							"nameCompartment": {
@@ -797,7 +797,7 @@
 							"left": 1008,
 							"top": 768,
 							"width": 153,
-							"height": 249,
+							"height": 425,
 							"nameCompartment": {
 								"$ref": "AAAAAAGJWVl6TJ4GxsY="
 							}
@@ -813,7 +813,7 @@
 							"top": 856,
 							"width": 328.19976806640625,
 							"height": 161,
-							"text": "MAKES GET REQUEST : \n1. /general/user/${id}\n2. /client/products\n3. /client/customers\n4. /client/transactions"
+							"text": "GET DATA FROM BACKEND BY \nMAKING GET REQUEST & READY DATA FOR FRONTEND : \n\n1. /general/user/${id}\n2. /client/products\n3. /client/customers\n4. /client/transactions"
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -851,12 +851,12 @@
 										"$ref": "AAAAAAGJWWTa45+H2ko="
 									},
 									"font": "Arial;15;0",
-									"left": 1062,
-									"top": 1325,
+									"left": 1278,
+									"top": 1336,
 									"width": 172.921875,
 									"height": 15,
-									"alpha": -1.808763954683473,
-									"distance": 115.97413504743201,
+									"alpha": 1.143478436387474,
+									"distance": 102.1077861869505,
 									"hostEdge": {
 										"$ref": "AAAAAAGJWWTa5J+JdAQ="
 									},
@@ -1441,7 +1441,7 @@
 							},
 							"font": "Source Code Pro;15;0",
 							"left": 1520,
-							"top": 1560,
+							"top": 1704,
 							"width": 177,
 							"height": 176,
 							"text": "ROUTES:\n/client\n/general\n/sales\n/management\nMONGO DB CONNECTION"
@@ -1460,7 +1460,7 @@
 								"$ref": "AAAAAAGJWVCwIJ2d+hI="
 							},
 							"lineStyle": 1,
-							"points": "1611:1557;1611:1559"
+							"points": "1611:1701;1611:1703"
 						},
 						{
 							"_type": "UMLPackageView",
@@ -3369,6 +3369,225 @@
 							"propertyLabel": {
 								"$ref": "AAAAAAGJXp49p1ysWeQ="
 							}
+						},
+						{
+							"_type": "UMLPackageView",
+							"_id": "AAAAAAGJYrbJQEMwfOg=",
+							"_parent": {
+								"$ref": "AAAAAAGJWUp23Zy22i8="
+							},
+							"model": {
+								"$ref": "AAAAAAGJYrbJP0Mu1Eg="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAGJYrbJQEMxJZI=",
+									"_parent": {
+										"$ref": "AAAAAAGJYrbJQEMwfOg="
+									},
+									"model": {
+										"$ref": "AAAAAAGJYrbJP0Mu1Eg="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGJYrbJQEMyrY4=",
+											"_parent": {
+												"$ref": "AAAAAAGJYrbJQEMxJZI="
+											},
+											"visible": false,
+											"font": "Source Code Pro;13;0",
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGJYrbJQEMz2Zc=",
+											"_parent": {
+												"$ref": "AAAAAAGJYrbJQEMxJZI="
+											},
+											"font": "Source Code Pro;13;1",
+											"left": 1037,
+											"top": 1118,
+											"width": 94,
+											"height": 13,
+											"text": "geoData.js"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGJYrbJQEM0/NE=",
+											"_parent": {
+												"$ref": "AAAAAAGJYrbJQEMxJZI="
+											},
+											"visible": false,
+											"font": "Source Code Pro;13;0",
+											"width": 101.39984130859375,
+											"height": 13,
+											"text": "(from Model1)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGJYrbJQEM1r9E=",
+											"_parent": {
+												"$ref": "AAAAAAGJYrbJQEMxJZI="
+											},
+											"visible": false,
+											"font": "Source Code Pro;13;0",
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Source Code Pro;13;0",
+									"left": 1032,
+									"top": 1111,
+									"width": 104,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAGJYrbJQEMyrY4="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAGJYrbJQEMz2Zc="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAGJYrbJQEM0/NE="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAGJYrbJQEM1r9E="
+									}
+								}
+							],
+							"font": "Source Code Pro;13;0",
+							"containerChangeable": true,
+							"left": 1032,
+							"top": 1096,
+							"width": 104,
+							"height": 40,
+							"nameCompartment": {
+								"$ref": "AAAAAAGJYrbJQEMxJZI="
+							}
+						},
+						{
+							"_type": "UMLNoteView",
+							"_id": "AAAAAAGJYrcmqUNIELg=",
+							"_parent": {
+								"$ref": "AAAAAAGJWUp23Zy22i8="
+							},
+							"font": "Source Code Pro;13;0",
+							"left": 720,
+							"top": 1080,
+							"width": 156,
+							"height": 67,
+							"text": "GEO DATA BY NIVO MAPS"
+						},
+						{
+							"_type": "UMLNoteLinkView",
+							"_id": "AAAAAAGJYrcmtENL92Y=",
+							"_parent": {
+								"$ref": "AAAAAAGJWUp23Zy22i8="
+							},
+							"font": "Source Code Pro;13;0",
+							"head": {
+								"$ref": "AAAAAAGJYrcmqUNIELg="
+							},
+							"tail": {
+								"$ref": "AAAAAAGJYrbJQEMwfOg="
+							},
+							"lineStyle": 1,
+							"points": "1031:1115;876:1114"
+						},
+						{
+							"_type": "UMLDependencyView",
+							"_id": "AAAAAAGJYuYHekPSog4=",
+							"_parent": {
+								"$ref": "AAAAAAGJWUp23Zy22i8="
+							},
+							"model": {
+								"$ref": "AAAAAAGJYuYHekPQBK0="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGJYuYHekPT700=",
+									"_parent": {
+										"$ref": "AAAAAAGJYuYHekPSog4="
+									},
+									"model": {
+										"$ref": "AAAAAAGJYuYHekPQBK0="
+									},
+									"visible": false,
+									"font": "Source Code Pro;13;0",
+									"left": 1487,
+									"top": 1691,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGJYuYHekPSog4="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGJYuYHekPUkq0=",
+									"_parent": {
+										"$ref": "AAAAAAGJYuYHekPSog4="
+									},
+									"model": {
+										"$ref": "AAAAAAGJYuYHekPQBK0="
+									},
+									"visible": null,
+									"font": "Source Code Pro;13;0",
+									"left": 1487,
+									"top": 1706,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAGJYuYHekPSog4="
+									},
+									"edgePosition": 1
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGJYuYHe0PVUx4=",
+									"_parent": {
+										"$ref": "AAAAAAGJYuYHekPSog4="
+									},
+									"model": {
+										"$ref": "AAAAAAGJYuYHekPQBK0="
+									},
+									"visible": false,
+									"font": "Source Code Pro;13;0",
+									"left": 1486,
+									"top": 1662,
+									"height": 13,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGJYuYHekPSog4="
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Source Code Pro;13;0",
+							"head": {
+								"$ref": "AAAAAAGJWVMnGZ238rs="
+							},
+							"tail": {
+								"$ref": "AAAAAAGJWVCwIJ2d+hI="
+							},
+							"lineStyle": 1,
+							"points": "1519:1682;1456:1684",
+							"showVisibility": true,
+							"nameLabel": {
+								"$ref": "AAAAAAGJYuYHekPT700="
+							},
+							"stereotypeLabel": {
+								"$ref": "AAAAAAGJYuYHekPUkq0="
+							},
+							"propertyLabel": {
+								"$ref": "AAAAAAGJYuYHe0PVUx4="
+							}
 						}
 					]
 				},
@@ -3424,19 +3643,34 @@
 						},
 						{
 							"_type": "UMLPackage",
-							"_id": "AAAAAAGJWVCwIJ2b1pA=",
-							"_parent": {
-								"$ref": "AAAAAAGJWUrMSZzUxUk="
-							},
-							"name": "index.js"
-						},
-						{
-							"_type": "UMLPackage",
 							"_id": "AAAAAAGJW0jBYEgEM70=",
 							"_parent": {
 								"$ref": "AAAAAAGJWUrMSZzUxUk="
 							},
 							"name": "client.js"
+						},
+						{
+							"_type": "UMLPackage",
+							"_id": "AAAAAAGJWVCwIJ2b1pA=",
+							"_parent": {
+								"$ref": "AAAAAAGJWUrMSZzUxUk="
+							},
+							"name": "index.js",
+							"ownedElements": [
+								{
+									"_type": "UMLDependency",
+									"_id": "AAAAAAGJYuYHekPQBK0=",
+									"_parent": {
+										"$ref": "AAAAAAGJWVCwIJ2b1pA="
+									},
+									"source": {
+										"$ref": "AAAAAAGJWVCwIJ2b1pA="
+									},
+									"target": {
+										"$ref": "AAAAAAGJWVMnGZ21UfI="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLPackage",
@@ -3526,6 +3760,19 @@
 									"name": "client.js"
 								}
 							]
+						},
+						{
+							"_type": "UMLDependency",
+							"_id": "AAAAAAGJYuV2DEOf8Xw=",
+							"_parent": {
+								"$ref": "AAAAAAGJWUrMSZzUxUk="
+							},
+							"source": {
+								"$ref": "AAAAAAGJWVCwIJ2b1pA="
+							},
+							"target": {
+								"$ref": "AAAAAAGJWVMnGZ21UfI="
+							}
 						}
 					]
 				},
@@ -3760,6 +4007,14 @@
 							}
 						}
 					]
+				},
+				{
+					"_type": "UMLPackage",
+					"_id": "AAAAAAGJYrbJP0Mu1Eg=",
+					"_parent": {
+						"$ref": "AAAAAAGJWUp23Zy16gY="
+					},
+					"name": "geoData.js"
 				}
 			]
 		}

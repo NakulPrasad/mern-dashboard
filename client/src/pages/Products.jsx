@@ -90,7 +90,7 @@ const Products = () => {
   //we get isLoading from redux: true : data is processing to appear on frontend
   const isNonMobile = useMediaQuery("(min-width:1000px)");
   const { data, isLoading } = useGetProductsQuery();
-  console.log(data);
+  // console.log(data);
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="PRODUCTS" subtitle="See your list of products." />

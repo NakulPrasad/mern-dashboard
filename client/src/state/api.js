@@ -1,14 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-
-//exports: 
-// api: {
-//     baseQuery, fetchBaseQuery, tagtypes, and query:json object
-// }
+//MAKES GET REQUESTS TO BACKEND
 
 export const api = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
-    reducerPath: "adminApi",
+    reducerPath: "adminApi", //name in redux store
     tagTypes: [
         "User",
         "Products",
@@ -21,7 +17,6 @@ export const api = createApi({
         "Dashboard",
     ],
     endpoints: (build) => ({
-        //only send get requests as 
         getUser: build.query({
             query: (id) => `general/user/${id}`, //saves json object of that id form db
             providesTags: ["User"],
@@ -42,6 +37,10 @@ export const api = createApi({
             }),
             providesTags: ["Transactions"],
         }),
+        getGeography: build.query({
+            query: () => 'client/geography',
+            providesTags: ['Geography']
+        })
     })
 })
 
@@ -53,5 +52,6 @@ export const {
     //user with role:user
     useGetCustomersQuery,
     useGetTransactionsQuery,
+    useGetGeographyQuery,
 
 } = api
