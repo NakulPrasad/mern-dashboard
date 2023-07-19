@@ -25,7 +25,7 @@ const Geography = () => {
               axis: {
                 domain: {
                   line: {
-                    stroke: theme.palette.secondary[200],
+                    stroke: theme.palette.secondary[300],
                   },
                 },
                 legend: {

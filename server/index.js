@@ -10,12 +10,14 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
+
 //data db imports
 import User from "./models/User.js"; //mongoose schema
 import Product from "./models/Product.js";
 import ProductStat from "./models/ProductStat.js";
 import Transaction from "./models/Transaction.js";
-import { dataUser, dataProduct, dataProductStat, dataTransaction } from './data/index.js' //db
+import OverallStat from "./models/OverallStat.js";
+import { dataUser, dataProduct, dataProductStat, dataTransaction, dataOverallStat } from './data/index.js' //db
 
 
 // CONFIGURATION
@@ -38,7 +40,7 @@ app.use(cors());
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
-app.use("/sales", salesRoutes);
+app.use("/sale", salesRoutes);
 
 /* MONGOOSE SETUP*/
 // 
@@ -56,5 +58,6 @@ mongoose
         // ProductStat.insertMany(dataProductStat)
         // User.insertMany(dataUser);
         // Transaction.insertMany(dataTransaction);
+        // OverallStat.insertMany(dataOverallStat)
     })
     .catch((err) => console.error("Could not connect to MongoDB...", err));
