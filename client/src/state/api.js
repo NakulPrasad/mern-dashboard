@@ -12,7 +12,6 @@ export const api = createApi({
         "Transactions",
         "Geography",
         "Sales",
-        "Admins",
         "Performance",
         "Dashboard",
     ],

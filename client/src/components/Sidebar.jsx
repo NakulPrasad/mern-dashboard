@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   Box,
-  Divider,
   Drawer,
   IconButton,
   List,
@@ -13,7 +12,6 @@ import {
   useTheme,
 } from "@mui/material";
 import {
-  SettingsOutlined,
   ChevronLeft,
   ChevronRightOutlined,
   HomeOutlined,
@@ -22,9 +20,7 @@ import {
   ReceiptLongOutlined,
   PublicOutlined,
   PointOfSaleOutlined,
-  TodayOutlined,
   CalendarMonthOutlined,
-  AdminPanelSettingsOutlined,
   TrendingUpOutlined,
   PieChartOutlined,
   LiveHelpOutlined,
@@ -51,10 +47,6 @@ const navItems = [
   {
     text: "Calender",
     icon: <CalendarMonthOutlined />,
-  },
-  {
-    text: "Admin",
-    icon: <AdminPanelSettingsOutlined />,
   },
   {
     text: "Performance",

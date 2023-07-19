@@ -14,6 +14,7 @@ import Overview from "pages/Overview";
 import Breakdown from 'pages/Breakdown'
 import FAQ from "pages/FAQ";
 import Calendar from "pages/Calendar";
+import Performance from "pages/Performance";
 
 
 
@@ -42,6 +43,7 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path='/faq' element={<FAQ />} />
               <Route path="/calender" element={<Calendar />} />
+              <Route path="/performance" element={<Performance />} />
 
 
 

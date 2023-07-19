@@ -13,6 +13,7 @@ import { useMediaQuery, useTheme } from "@mui/material";
 const Calendar = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
+  const isSmallScreens = useMediaQuery("(max-width: 767px)");
 
   const [currentEvents, setCurrentEvents] = useState([]);
 
@@ -48,13 +49,14 @@ const Calendar = () => {
         <Header title="CALENDAR" subtitle="Fully Interactive Calendar" />
       </FlexBetween>
 
-      <Box display="flex" justifyContent="space-between">
+      <Box display="flex" justifyContent="space-between" m="1.5rem 0">
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 20%"
           backgroundColor={"#1F2A40"}
           p="15px"
           borderRadius="4px"
+          hidden={isSmallScreens}
         >
           <Typography variant="h5">Events</Typography>
           <List>
@@ -85,7 +87,7 @@ const Calendar = () => {
         </Box>
 
         {/* CALENDAR */}
-        <Box flex="1 1 100%" ml="15px">
+        <Box flex="1 1 100%" mr="15px">
           <FullCalendar
             height="75vh"
             plugins={[
@@ -96,7 +98,6 @@ const Calendar = () => {
             ]}
             headerToolbar={{
               left: "prev,next today",
-              center: "title",
               right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
             }}
             initialView="dayGridMonth"
