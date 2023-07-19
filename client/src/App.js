@@ -12,6 +12,8 @@ import Transactions from "pages/Transactions";
 import Geography from "pages/Geography";
 import Overview from "pages/Overview";
 import Breakdown from 'pages/Breakdown'
+import FAQ from "pages/FAQ";
+import Calendar from "pages/Calendar";
 
 
 
@@ -38,6 +40,9 @@ function App() {
               <Route path="/geography" element={<Geography />} />
               <Route path='/overview' element={<Overview />} />
               <Route path="/breakdown" element={<Breakdown />} />
+              <Route path='/faq' element={<FAQ />} />
+              <Route path="/calender" element={<Calendar />} />
+
 
 
             </Route>
