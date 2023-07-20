@@ -14,10 +14,12 @@ export const api = createApi({
         "Sales",
         "Performance",
         "Dashboard",
+        "Add User",
+        "Admin"
     ],
     endpoints: (build) => ({
         getUser: build.query({
-            query: (id) => `general/user/${id}`, //saves json object of that id form db
+            query: (id) => `general/user/${id}`,
             providesTags: ["User"],
         }),
         getProducts: build.query({
@@ -47,8 +49,35 @@ export const api = createApi({
         getDashboard: build.query({
             query: () => 'general/dashboard',
             providesTags: ["Dashboard"]
-        })
-    })
+        }),
+        addUser: build.mutation({
+            query: (newUser) => ({
+                url: '/management/adduser',
+                method: 'POST',
+                body: newUser
+            }),
+            providesTags: ["Add User"]
+        }),
+        getAdmin: build.query({
+            query: () => 'management/admin',
+            providesTags: ["Admin"]
+        }),
+        editUser: build.mutation({
+            query: ({ User, id }) => ({
+                url: `/management/edit/user/${id}`,
+                method: 'PUT',
+                body: User
+            }),
+            providesTags: ["Edit User"]
+        }),
+        deleteUser: build.mutation({
+            query: (id) => ({
+                url: `/management/edit/user/${id}`,
+                method: 'DELETE',
+            }),
+        }),
+    }),
+
 })
 
 export const {
@@ -62,5 +91,9 @@ export const {
     useGetGeographyQuery,
     useGetSalesQuery,
     useGetDashboardQuery,
+    useAddUserMutation,
+    useGetAdminQuery,
+    useEditUserMutation,
+    useDeleteUserMutation,
 
 } = api

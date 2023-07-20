@@ -1,6 +1,7 @@
 //schema for user that represent model of data
 import mongoose from "mongoose";
 
+
 const UserSchema = new mongoose.Schema(
     {
         name: {
@@ -20,6 +21,7 @@ const UserSchema = new mongoose.Schema(
             required: true,
             min: 5,
         },
+
         city: String,
         state: String,
         country: String,

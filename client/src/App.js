@@ -14,7 +14,9 @@ import Overview from "pages/Overview";
 import Breakdown from 'pages/Breakdown'
 import FAQ from "pages/FAQ";
 import Calendar from "pages/Calendar";
-import Performance from "pages/Performance";
+import Admin from "pages/Admin";
+import Form from "pages/Form";
+import EditForm from "pages/EditForm";
 
 
 
@@ -43,7 +45,9 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path='/faq' element={<FAQ />} />
               <Route path="/calender" element={<Calendar />} />
-              <Route path="/performance" element={<Performance />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/users" element={<Form />} />
+              <Route path="/management/edit/user/:id" element={<EditForm />} />
 
 
 

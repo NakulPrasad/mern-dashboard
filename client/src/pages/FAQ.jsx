@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 import Header from "components/Header";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -6,7 +6,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import FlexBetween from "components/FlexBetween";
-import useMediaQuery from "@mui/material";
 
 const FAQ = () => {
   //   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");

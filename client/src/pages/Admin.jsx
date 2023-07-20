@@ -1,20 +1,18 @@
 import React from "react";
-import { Box, useTheme } from "@mui/material";
-import { useGetCustomersQuery } from "state/api";
+import { Box, useTheme, Button } from "@mui/material";
+import { useGetAdminQuery, useDeleteUserMutation } from "state/api";
 import Header from "components/Header";
 import { DataGrid } from "@mui/x-data-grid";
+import { useNavigate } from "react-router-dom";
 
-const Performance = () => {
+const Admin = () => {
   const theme = useTheme();
-  const { data, isLoading } = useGetCustomersQuery();
+  const { data, isLoading } = useGetAdminQuery();
+  const [deleteUser] = useDeleteUserMutation();
+  const navigate = useNavigate();
   // console.log("data", data);
 
   const columns = [
-    {
-      field: "_id",
-      headerName: "ID",
-      flex: 1,
-    },
     {
       field: "name",
       headerName: "Name",
@@ -33,26 +31,57 @@ const Performance = () => {
         return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
       },
     },
-    {
-      field: "country",
-      headerName: "Country",
-      flex: 0.4,
-    },
-    {
-      field: "occupation",
-      headerName: "Occupation",
-      flex: 1,
-    },
+
     {
       field: "role",
       headerName: "Role",
       flex: 0.5,
     },
+    {
+      field: "edit",
+      headerName: "Edit",
+      renderCell: (params) => (
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => handleEdit(params.row._id)}
+        >
+          Edit
+        </Button>
+      ),
+    },
+    {
+      field: "delete",
+      headerName: "Delete",
+      renderCell: (params) => (
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => handleDelete(params.row._id)}
+        >
+          Delete
+        </Button>
+      ),
+    },
   ];
+
+  const handleEdit = (id) => {
+    // Call your API to delete user from the database
+    // console.log(id);
+    navigate(`/management/edit/user/${id}`);
+  };
+
+  const handleDelete = (id) => {
+    // Call your API to delete user from the database
+
+    deleteUser(id);
+    alert("User Deleted Successfully");
+    window.location.reload();
+  };
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="CUSTOMERS" subtitle="List of Customers" />
+      <Header title="Admins" subtitle="List of Admins" />
       <Box
         mt="40px"
         height="75vh"
@@ -92,4 +121,4 @@ const Performance = () => {
   );
 };
 
-export default Performance;
+export default Admin;

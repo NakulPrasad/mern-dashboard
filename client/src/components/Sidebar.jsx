@@ -21,9 +21,9 @@ import {
   PublicOutlined,
   PointOfSaleOutlined,
   CalendarMonthOutlined,
-  TrendingUpOutlined,
   PieChartOutlined,
   LiveHelpOutlined,
+  AccountCircleOutlined,
 } from "@mui/icons-material";
 
 import { useLocation, useNavigate } from "react-router-dom";
@@ -49,8 +49,12 @@ const navItems = [
     icon: <CalendarMonthOutlined />,
   },
   {
-    text: "Performance",
-    icon: <TrendingUpOutlined />,
+    text: "Admin",
+    icon: <AccountCircleOutlined />,
+  },
+  {
+    text: "Users",
+    icon: <AccountCircleOutlined />,
   },
   {
     text: "Data",
@@ -95,7 +99,7 @@ const Sidebar = ({
   isNonMobile,
 }) => {
   const { pathname } = useLocation();
-  console.log(pathname);
+  // console.log(pathname);
   const [active, setActive] = useState("");
   const navigate = useNavigate();
   const theme = useTheme();
