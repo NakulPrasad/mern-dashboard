@@ -26,13 +26,6 @@ jobs:
           cd server
           npm install
 
-      - name: Install npm packages, build then copy files - client
-        run: |
-          cd client
-          npm install
-          npm run build
-          xcopy /E /I .\build ..\server\public
-
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -60,3 +53,8 @@ jobs:
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3B8075491A6345C5985C4581E6B0026E }}
           package: .
+
+      - name: Run- server
+        run: |
+          cd server
+          npm start &
