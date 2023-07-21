@@ -45,13 +45,13 @@ app.use("/management", managementRoutes);
 app.use("/sale", salesRoutes);
 
 // Connecting frontend
-
-app.use(express.static(path.join(path.resolve(), './client/build')));
-app.get('*', function (req, res) {
-    res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
-        res.status(500).send(err);
-    })
-});
+// Serve Static assets if in production
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build")); // change this if your dir structure is different
+    app.get("*", (req, res) => {
+        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    });
+}
 
 
 /* MONGOOSE SETUP*/

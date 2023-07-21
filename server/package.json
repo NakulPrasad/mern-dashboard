@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "azure": "npm install && node index.js",
+    "azure": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client && npm run start",
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
