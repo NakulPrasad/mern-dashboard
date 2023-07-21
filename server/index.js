@@ -45,18 +45,18 @@ app.use("/management", managementRoutes);
 app.use("/sale", salesRoutes);
 
 // Connecting frontend
-// Serve Static assets if in production
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build")); // change this if your dir structure is different
-    app.get("*", (req, res) => {
-        res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-    });
-}
+// Serve static files from the React app in production
+app.use(express.static(path.join(__dirname, './client/build')));
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"), function (err) {
+        res.status(500).send(err);
+    })
+});
 
 
 /* MONGOOSE SETUP*/
 // 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 80;
 mongoose
     .connect("mongodb+srv://nakul:qwerty123@foodd.5qdwl8g.mongodb.net/mern_dashboard?retryWrites=true&w=majority", {
         useNewUrlParser: true,
