@@ -46,9 +46,9 @@ app.use("/sale", salesRoutes);
 
 // Connecting frontend
 
-app.use(express.static(path.join(path.resolve(), './client/build')));
+app.use(express.static(path.join(path.resolve(), './server/public/build')));
 app.get('*', function (req, res) {
-    res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
+    res.sendFile(path.join(path.resolve(), "./server/public/build/index.html"), function (err) {
         res.status(500).send(err);
     })
 });
