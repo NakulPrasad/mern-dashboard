@@ -9,6 +9,7 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
+import path from "path";
 
 
 //data db imports
@@ -41,6 +42,14 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sale", salesRoutes);
+
+// Connecting frontend
+app.use(express.static(path.join(path.resolve(), './client/build')));
+app.get('*', function (req, res) {
+    res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
+        res.status(500).send(err);
+    })
+});
 
 /* MONGOOSE SETUP*/
 // 
