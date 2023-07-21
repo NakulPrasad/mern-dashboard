@@ -159,7 +159,7 @@ const Sidebar = ({
                 >
                   {user.name}
                 </Typography>
-                <Typography variant="h5">{user.occupation}</Typography>
+                <Typography variant="h5">Super Admin</Typography>
               </Box>
             </Box>
 
