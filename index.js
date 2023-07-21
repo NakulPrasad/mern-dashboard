@@ -58,7 +58,7 @@ app.get('*', function (req, res) {
 // 
 const PORT = process.env.PORT || 5000;
 mongoose
-    .connect(process.env.MONGO_URL, {
+    .connect("mongodb+srv://nakul:qwerty123@foodd.5qdwl8g.mongodb.net/mern_dashboard?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
