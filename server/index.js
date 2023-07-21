@@ -46,9 +46,9 @@ app.use("/sale", salesRoutes);
 
 // Connecting frontend
 // Serve static files from the React app in production
-app.use(express.static(path.join(__dirname, './client/build')));
+app.use(express.static(path.join(path.resolve(), './client/build')));
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"), function (err) {
+    res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
         res.status(500).send(err);
     })
 });
