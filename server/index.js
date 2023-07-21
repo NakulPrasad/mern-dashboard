@@ -44,12 +44,14 @@ app.use("/management", managementRoutes);
 app.use("/sale", salesRoutes);
 
 // Connecting frontend
-app.use(express.static(path.join(path.resolve(), './client/build')));
-app.get('*', function (req, res) {
-    res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
-        res.status(500).send(err);
-    })
-});
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(path.resolve(), './client/build')));
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(path.resolve(), "./client/build/index.html"), function (err) {
+            res.status(500).send(err);
+        })
+    });
+}
 
 /* MONGOOSE SETUP*/
 // 
