@@ -8,11 +8,11 @@ import listPlugin from "@fullcalendar/list";
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import Header from "components/Header";
 import FlexBetween from "components/FlexBetween";
-import { useMediaQuery, useTheme } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Calendar = () => {
-  const theme = useTheme();
-  const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
+  // const theme = useTheme();
+  // const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const isSmallScreens = useMediaQuery("(max-width: 767px)");
 
   const [currentEvents, setCurrentEvents] = useState([]);

@@ -131,7 +131,7 @@ const Sidebar = ({
               <FlexBetween color={theme.palette.secondary[300]}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography variant="h4" fontWeight="bold">
-                    DASHBOARD
+                    ESHOP
                   </Typography>
                 </Box>
                 {!isNonMobile && (
@@ -155,7 +155,7 @@ const Sidebar = ({
                 <Typography
                   variant="h4"
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0", color: theme.palette.secondary[200] }}
+                  sx={{ m: "1vh 0", color: theme.palette.secondary[200] }}
                 >
                   {user.name}
                 </Typography>

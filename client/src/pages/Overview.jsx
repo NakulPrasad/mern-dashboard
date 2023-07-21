@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useGetSalesQuery } from "state/api";
+// import { useGetSalesQuery } from "state/api";
 import { FormControl, MenuItem, InputLabel, Box, Select } from "@mui/material";
 import Header from "components/Header";
 import OverviewChart from "components/OverviewChart";
@@ -7,8 +7,8 @@ import OverviewChart from "components/OverviewChart";
 const Overview = () => {
   const [view, setView] = useState("units");
 
-  const data = useGetSalesQuery();
-  console.log(data);
+  // const data = useGetSalesQuery();
+  // console.log(data);
   return (
     <Box m="1.5rem 2.5rem">
       <Header
