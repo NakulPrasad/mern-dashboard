@@ -7,7 +7,6 @@
   "scripts": {
     "azure": "npm install && node index.js",
     "start": "node index.js",
-    "build": "cd client && npm install && npm run build",
     "dev": "nodemon index.js"
   },
   "author": "",
