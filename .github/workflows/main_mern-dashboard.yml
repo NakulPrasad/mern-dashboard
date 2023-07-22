@@ -51,7 +51,7 @@ jobs:
         with:
           app-name: "mern-dashboard"
           slot-name: "Production"
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE4B1C25087447BABEA577543E9CC5DF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71EFC6B8F6D64D8AA10DCBE70ACADCEA }}
           package: .
 
       - name: Run- server
