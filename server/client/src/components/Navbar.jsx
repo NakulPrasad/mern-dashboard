@@ -3,9 +3,6 @@ import {
   LightModeOutlined,
   DarkModeOutlined,
   Menu as MenuIcon,
-  Search,
-  SettingsOutlined,
-
 } from "@mui/icons-material";
 import FlexBetween from "components/FlexBetween";
 import { useDispatch } from "react-redux";
@@ -15,9 +12,7 @@ import {
   AppBar,
   Button,
   Box,
-
   IconButton,
-  InputBase,
   Toolbar,
   Menu,
   MenuItem,
@@ -52,17 +47,6 @@ const NavBar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
           <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon />
           </IconButton>
-          <FlexBetween
-            backgroundColor={theme.palette.background.alt}
-            borderRadius="9px"
-            gap="3rem"
-            p="0.1rem 1.5rem"
-          >
-            <InputBase placeholder="Search..." />
-            <IconButton>
-              <Search />
-            </IconButton>
-          </FlexBetween>
         </FlexBetween>
 
         {/* RIGHT SIDE */}
@@ -73,9 +57,6 @@ const NavBar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
             ) : (
               <LightModeOutlined sx={{ fontSize: "25px" }} />
             )}
-          </IconButton>
-          <IconButton>
-            <SettingsOutlined sx={{ fontSize: "25px" }} />
           </IconButton>
 
           <FlexBetween>
@@ -106,6 +87,8 @@ const NavBar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
               anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
             >
               <MenuItem onClick={handleClose}>Log Out</MenuItem>
+              <MenuItem onClick={handleClose}>Profile</MenuItem>
+              <MenuItem onClick={handleClose}>Settings</MenuItem>
             </Menu>
           </FlexBetween>
         </FlexBetween>
