@@ -2,20 +2,20 @@ import User from "../models/User.js";
 
 
 //adding user
-export const addUser = async (request, response) => {
-    const user = request.body;
+export const addUser = async (req, res) => {
+    const user = req.body;
     const newUser = new User(user);
 
     try {
         await newUser.save();
 
-        response.status(201).json(newUser);
+        res.status(201).json(newUser);
     } catch (error) {
-        response.status(409).json(error.message)
+        res.status(409).json(error.message)
     }
 }
 
-export const getAdmin = async (req, res) => {
+export const getUsers = async (req, res) => {
     try {
         const customers = await User.find({ role: "admin" }).select("-password").select('-occupation').select('-country');
         res.status(200).json(customers);
@@ -35,9 +35,9 @@ export const deleteUser = async (req, res) => {
 };
 
 //updating user:
-export const editUser = async (request, response) => {
-    let user = request.body;
-    const { id } = request.params;
+export const editUser = async (reqt, res) => {
+    let user = reqt.body;
+    const { id } = reqt.params;
 
     // Log incoming data for troubleshooting
     // console.log(`Editing user with ID ${id} with data`, user);
@@ -47,10 +47,10 @@ export const editUser = async (request, response) => {
         const updatedUser = await User.findOneAndUpdate({ _id: id }, user, { new: true });
 
         // If successful, return updated user
-        response.status(201).json(updatedUser);
+        res.status(201).json(updatedUser);
     } catch (error) {
         // Log the error details
         console.log('Error details:', error);
-        response.status(409).json({ message: error.message });
+        res.status(409).json({ message: error.message });
     }
 };

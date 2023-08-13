@@ -13,21 +13,25 @@ const Customers = () => {
     {
       field: "_id",
       headerName: "ID",
+      minWidth: 150,
       flex: 1,
     },
     {
       field: "name",
       headerName: "Name",
+      minWidth: 150,
       flex: 0.5,
     },
     {
       field: "email",
       headerName: "Email",
       flex: 1,
+      minWidth: 150,
     },
     {
       field: "phoneNumber",
       headerName: "Phone Number",
+      minWidth: 150,
       flex: 0.5,
       renderCell: (params) => {
         return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3");
@@ -36,16 +40,19 @@ const Customers = () => {
     {
       field: "country",
       headerName: "Country",
+      minWidth: 150,
       flex: 0.4,
     },
     {
       field: "occupation",
       headerName: "Occupation",
+      minWidth: 150,
       flex: 1,
     },
     {
       field: "role",
       headerName: "Role",
+      minWidth: 150,
       flex: 0.5,
     },
   ];

@@ -50,11 +50,11 @@ const navItems = [
     icon: <CalendarMonthOutlined />,
   },
   {
-    text: "Admin",
+    text: "Users",
     icon: <AccountCircleOutlined />,
   },
   {
-    text: "Users",
+    text: "Add User",
     icon: <AccountCircleOutlined />,
   },
   {

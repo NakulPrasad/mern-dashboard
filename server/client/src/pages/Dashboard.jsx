@@ -22,21 +22,25 @@ const Dashboard = () => {
     {
       field: "_id",
       headerName: "ID",
+      minWidth: 150,
       flex: 1,
     },
     {
       field: "userId",
       headerName: "User ID",
+      minWidth: 150,
       flex: 1,
     },
     {
       field: "createdAt",
       headerName: "CreatedAt",
+      minWidth: 150,
       flex: 1,
     },
     {
       field: "products",
       headerName: "# of Products",
+      minWidth: 150,
       flex: 0.5,
       sortable: false,
       renderCell: (params) => params.value.length,
@@ -44,6 +48,7 @@ const Dashboard = () => {
     {
       field: "cost",
       headerName: "Cost",
+      minWidth: 150,
       flex: 1,
       renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
     },

@@ -14,9 +14,9 @@ import Overview from "pages/Overview";
 import Breakdown from 'pages/Breakdown'
 import FAQ from "pages/FAQ";
 import Calendar from "pages/Calendar";
-import Admin from "pages/Admin";
-import Form from "pages/Form";
-import EditForm from "pages/EditForm";
+import User from "pages/User";
+import AddUser from "pages/AddUser";
+import EditUser from "pages/EditUser";
 
 
 
@@ -45,9 +45,9 @@ function App() {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path='/faq' element={<FAQ />} />
               <Route path="/calender" element={<Calendar />} />
-              <Route path="/admin" element={<Admin />} />
-              <Route path="/users" element={<Form />} />
-              <Route path="/management/edit/user/:id" element={<EditForm />} />
+              <Route path="/users" element={<User />} />
+              <Route path="/add user" element={<AddUser />} />
+              <Route path="/management/edit/user/:id" element={<EditUser />} />
 
 
 

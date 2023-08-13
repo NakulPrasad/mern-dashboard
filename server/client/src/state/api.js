@@ -58,8 +58,8 @@ export const api = createApi({
             }),
             providesTags: ["Add User"]
         }),
-        getAdmin: build.query({
-            query: () => 'management/admin',
+        getUsers: build.query({
+            query: () => 'management/users',
             providesTags: ["Admin"]
         }),
         editUser: build.mutation({
@@ -92,7 +92,7 @@ export const {
     useGetSalesQuery,
     useGetDashboardQuery,
     useAddUserMutation,
-    useGetAdminQuery,
+    useGetUsersQuery,
     useEditUserMutation,
     useDeleteUserMutation,
 

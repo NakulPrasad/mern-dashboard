@@ -28,21 +28,25 @@ const Transactions = () => {
       field: "_id",
       headerName: "ID",
       flex: 1,
+      minWidth: 150,
     },
     {
       field: "userId",
       headerName: "User ID",
       flex: 1,
+      minWidth: 150,
     },
     {
       field: "createdAt",
       headerName: "CreatedAt",
       flex: 1,
+      minWidth: 150,
     },
     {
       field: "products",
       headerName: "# of Products",
       flex: 0.5,
+      minWidth: 150,
       sortable: false,
       renderCell: (params) => params.value.length,
     },
@@ -50,6 +54,7 @@ const Transactions = () => {
       field: "cost",
       headerName: "Cost",
       flex: 1,
+      minWidth: 150,
       renderCell: (params) => `₹${Number(params.value).toFixed(2)}`,
     },
   ];
