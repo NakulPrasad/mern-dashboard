@@ -1846,7 +1846,7 @@
 											"top": 846,
 											"width": 94.2578125,
 											"height": 15,
-											"text": "darkmode.js"
+											"text": "theme.js"
 										},
 										{
 											"_type": "LabelView",
@@ -2796,9 +2796,9 @@
 							"font": "Source Code Pro;15;0",
 							"left": 1448,
 							"top": 760,
-							"width": 129,
-							"height": 81,
-							"text": "get id form redux store\nstores userObj "
+							"width": 137,
+							"height": 89,
+							"text": "get theme mode, isSidebarOpen from redux store."
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -2814,7 +2814,7 @@
 								"$ref": "AAAAAAGJWfl47KDcJnE="
 							},
 							"lineStyle": 1,
-							"points": "1380:833;1447:816"
+							"points": "1380:835;1447:819"
 						},
 						{
 							"_type": "UMLPackageView",
@@ -3098,9 +3098,9 @@
 										"$ref": "AAAAAAGJXprzXlxx4dc="
 									},
 									"font": "Source Code Pro;13;0",
-									"left": 1172,
+									"left": 1161,
 									"top": 954,
-									"width": 70.19989013671875,
+									"width": 93.599853515625,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3108,7 +3108,7 @@
 										"$ref": "AAAAAAGJXprzX1xztms="
 									},
 									"edgePosition": 1,
-									"text": "+imports"
+									"text": "+get request"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3295,9 +3295,9 @@
 										"$ref": "AAAAAAGJXp49plynHow="
 									},
 									"font": "Source Code Pro;13;0",
-									"left": 1171,
+									"left": 1156,
 									"top": 992,
-									"width": 62.39990234375,
+									"width": 93.599853515625,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3305,7 +3305,7 @@
 										"$ref": "AAAAAAGJXp49p1ypYiI="
 									},
 									"edgePosition": 1,
-									"text": "+imports"
+									"text": "+get request"
 								},
 								{
 									"_type": "EdgeLabelView",
@@ -3922,7 +3922,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGJWVl6TJ4D3Hw="
 									},
-									"name": "darkmode.js"
+									"name": "theme.js"
 								}
 							]
 						}
@@ -3974,7 +3974,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGJXezIuFxKnBY="
 							},
-							"name": "imports",
+							"name": "get request",
 							"source": {
 								"$ref": "AAAAAAGJXezIuFxKnBY="
 							},
@@ -3998,7 +3998,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGJXpu9HlyDWtQ="
 							},
-							"name": "imports",
+							"name": "get request",
 							"source": {
 								"$ref": "AAAAAAGJXpu9HlyDWtQ="
 							},
