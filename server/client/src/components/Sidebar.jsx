@@ -29,7 +29,7 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
 import profileImage from "assets/profile.jpg";
-import ClickAwayListener from "@mui/base/ClickAwayListener";
+import {ClickAwayListener} from "@mui/base";
 
 // ITME list sidebar
 const navItems = [
